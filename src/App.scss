@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+@import "./Theme.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  padding: 1.5rem;
+  .calc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      height: 10vh;
+    }
+    .screen {
+      height: 90px;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 40px;
+      border-radius: 10px;
+    }
+    .controls {
+      height: 60vh;
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      padding: 1.5rem;
+      gap: 1rem;
+      button {
+        all: unset;
+        cursor: pointer;
+        height: calc(100% - 5px);
+        font-size: 34px;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      #rst {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      #eqv {
+        grid-column-start: 3;
+        grid-column-end: 5;
+      }
+    }
+  }
+}
+
+.dark {
+  background-color: $BlueMainBackground;
+  .calc {
+    .screen {
+      color: $WhiteText;
+      background-color: $BlueScreenBackground;
+    }
+    .controls {
+      background-color: $BlueSecondBackground;
+
+      button {
+        background-color: $GrayKeyBackground;
+        box-shadow: 0px 5px 0px 0px $GrayKeyShadow;
+        color: $BlueText;
+      }
+      #del {
+        box-shadow: 0px 5px 0px 0px $BlueKeyShadow;
+        background-color: $BlueKeyBackground;
+        color: $WhiteText;
+      }
+      #rst {
+        box-shadow: 0px 5px 0px 0px $BlueKeyShadow;
+        background-color: $BlueKeyBackground;
+        color: $WhiteText;
+      }
+      #eqv {
+        background-color: $RedKeyBackground;
+        box-shadow: 0px 5px 0px 0px $RedKeyShadow;
+        color: $WhiteText;
+      }
+    }
+  }
+}
+
+.light {
+  background-color: $GrayMainBackground;
+  .calc {
+    .screen {
+      background-color: $GrayScreenBackground;
+      color: $GrayText;
+    }
+    .controls {
+      background-color: $GraySecondBackground;
+
+      button {
+        background-color: $GrayishKeyBackground;
+        box-shadow: 0px 5px 0px 0px $GrayishKeyShadow;
+        color: $GrayText;
+      }
+      #del {
+        box-shadow: 0px 5px 0px 0px $DarkCyanKeyBackground;
+        background-color: $DarkCyanKeyShadow;
+        color: $WhiteText;
+      }
+      #rst {
+        box-shadow: 0px 5px 0px 0px $DarkCyanKeyBackground;
+        background-color: $DarkCyanKeyShadow;
+        color: $WhiteText;
+      }
+      #eqv {
+        background-color: $OrangeKeyBackground;
+        box-shadow: 0px 5px 0px 0px $OrangeKeyShadow;
+        color: $WhiteText;
+      }
+    }
+  }
+}
+
+.violet {
+  background-color: $VioletMainBackground;
+  .calc {
+    .screen {
+      background-color: $VioletSecondBackground;
+      color: $YellowText;
+    }
+    .controls {
+      background-color: $VioletSecondBackground;
+
+      button {
+        background-color: $DarkVioletKeyBackground;
+        box-shadow: 0px 5px 0px 0px $DarkVioleteyKeyShadow;
+        color: $YellowText;
+      }
+      #del {
+        box-shadow: 0px 5px 0px 0px $VioletKeyBackground;
+        background-color: $VioletKeyShadow;
+        color: $WhiteText;
+      }
+      #rst {
+        box-shadow: 0px 5px 0px 0px $VioletKeyBackground;
+        background-color: $VioletKeyShadow;
+        color: $WhiteText;
+      }
+      #eqv {
+        background-color: $CyanKeyBackground;
+        box-shadow: 0px 5px 0px 0px $CyanKeyShadow;
+        color: $DarkBlueText;
+      }
+    }
+  }
+}
